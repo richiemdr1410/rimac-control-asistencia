@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // -------------------------------------------------------------------------
+    // FASE 2E: POLÍTICA DENY-ALL DEFINITIVA TRAS CUTOVER A POSTGRESQL
+    // Firestore ha sido retirado como proveedor de persistencia operativa.
+    // Se prohíbe de forma absoluta e incondicional cualquier lectura o escritura.
+    // -------------------------------------------------------------------------
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

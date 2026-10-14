@@ -1,0 +1,33 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Configuración privada y metadatos AI Studio
+/firebase-applet-config.json
+/firebase-blueprint.json
+/metadata.json
+# Documentos internos y embeddings
+/storage/rag_docs/
+/.rag_embeddings_cache.json
+# Credenciales y respaldos locales
+*.pem
+*.key
+*.p12
+*.pfx
+*service-account*.json
+*service_account*.json
+*credentials*.json
+*.dump
+*.backup
+/backups/
+/secrets/
+# Temporales y configuración personal
+.idea/
+.vscode/
+Thumbs.db
+*.tsbuildinfo

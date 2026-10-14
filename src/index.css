@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --color-rimac-green: #009944;
+  --color-rimac-green-hover: #008039;
+  --color-rimac-green-active: #00662d;
+  --color-rimac-orange: #F15F2A;
+  --color-rimac-orange-hover: #d94e1d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
